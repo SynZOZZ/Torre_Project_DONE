@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Skills</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'static/style.css' %}">
+
+</head>
+<body>
+    <h1>Enter Username</h1>
+    <form action="{% url 'get_skills' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Enter username" required>
+        <button type="submit">Get Skills</button>
+    </form>
+</body>
+</html>

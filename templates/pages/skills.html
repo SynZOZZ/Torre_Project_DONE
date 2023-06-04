@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Skills</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'static/style.css' %}">
+
+</head>
+<body>
+    <h1>Skills</h1>
+    <ul>
+        {% for skill in skills %}
+            <li>{{ skill }}</li>
+        {% empty %}
+            <li>No skills found</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
